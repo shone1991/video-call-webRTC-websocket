@@ -1,4 +1,4 @@
-const LOCAL_IP_ADDRESS = "192.168.0.166";
+const LOCAL_IP_ADDRESS = "192.168.100.92";
 
 const getElement = id => document.getElementById(id);
 const [btnConnect, btnToggleVideo, btnToggleAudio, divRoomConfig, roomDiv, roomNameInput, localVideo, remoteVideo] = ["btnConnect",
@@ -23,7 +23,8 @@ const iceServers = {
 const streamConstraints = {audio: true, video: true};
 
 let socket = io.connect(`https://${LOCAL_IP_ADDRESS}`, {secure: true});
-// let socket = io.connect("http://192.168.0.3:8000");docker-compose up -d --build
+// let socket = io.connect("http://192.168.100.92:8000");
+//docker-compose up -d --build
 
 btnToggleVideo.addEventListener("click", () => toggleTrack("video"));
 btnToggleAudio.addEventListener("click", () => toggleTrack("audio"));
